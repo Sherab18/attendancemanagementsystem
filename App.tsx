@@ -6,8 +6,100 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 function DetailsScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Details!</Text>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#FFF8DC",
+      }}
+    >
+      <View style={{ marginBottom: "110px" }}>
+        <View
+          style={{
+            width: "30vh",
+            height: 45,
+            marginBottom: 20,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <h4 style={{ color: "#008080" }}>Attendance Tracker</h4>
+
+          <View>
+            <TextInput
+              placeholder="Name"
+              style={{
+                height: 50,
+                width: "90%",
+                padding: 10,
+                marginLeft: 20,
+                borderColor: "#00000",
+                borderBottomWidth: 1,
+              }}
+            ></TextInput>
+          </View>
+          <View>
+            <TextInput
+            placeholder="Student Number"
+            style={{
+              height: 50,
+              width: "90%",
+              padding: 10,
+              marginLeft: 20,
+              borderColor: "#00000",
+              borderBottomWidth: 1,
+            }}
+          ></TextInput>
+          </View>
+          <View>
+            <TextInput
+            placeholder="Email Address"
+            style={{
+              height: 50,
+              width: "90%",
+              padding: 10,
+              marginLeft: 20,
+              borderColor: "#00000",
+              borderBottomWidth: 1,
+            }}
+          ></TextInput></View>
+        <View></View>
+        <View></View>
+          <View>
+            <TextInput
+              placeholder="Password"
+              style={{
+                height: 50,
+                width: "90%",
+                padding: 10,
+                marginLeft: 20,
+                borderColor: "#00000",
+                borderBottomWidth: 1,
+              }}
+            ></TextInput>
+          </View>
+          <br></br>
+          <View>
+            <label>Select the module of the semester</label><br></br>
+              <View  style={{padding:'10px'}}>
+              <select>
+                <option>DIS</option>
+                <option>NWC</option>
+                <option>EDP</option>              
+              </select>
+              </View>
+          </View><br></br>
+          <View style={{ height: 30, marginBottom: 30 }}>
+            <Text>Forgot Password</Text>
+          </View>
+
+          <Button
+            title="NEXT"
+            color="#008080"
+          />
+        </View>
+      </View>
     </View>
   );
 }
@@ -22,55 +114,55 @@ function HomeScreen({ navigation }) {
         backgroundColor: "#FFF8DC",
       }}
     >
-      <View style={{marginBottom: '110px'}}>
+      <View style={{ marginBottom: "110px" }}>
         <View
           style={{
             width: "30vh",
             height: 45,
             marginBottom: 20,
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
-           <h4 style={{ color: "#008080",}}>Attendance Tracker</h4>
+          <h4 style={{ color: "#008080" }}>Attendance Tracker</h4>
 
           <View>
             <TextInput
-            placeholder="Username"
-            style={{
-              height: 50,
-              width: "90%",
-              padding: 10,
-              marginLeft: 20,
-              borderColor: "#00000",
-              borderBottomWidth: 1,
-            }}
-          ></TextInput></View>
-        <View>
-          <TextInput
-            placeholder="Password"
-            style={{
-              height: 50,
-              width: "90%",
-              padding: 10,
-              marginLeft: 20,
-              borderColor: "#00000",
-              borderBottomWidth: 1,
-            }}
-          ></TextInput>
-        </View><br></br><br></br>
-        <View style={{ height: 30, marginBottom: 30 }}>
-          <Text>Forgot Password</Text>
+              placeholder="Username"
+              style={{
+                height: 50,
+                width: "90%",
+                padding: 10,
+                marginLeft: 20,
+                borderColor: "#00000",
+                borderBottomWidth: 1,
+              }}
+            ></TextInput>
+          </View>
+          <View>
+            <TextInput
+              placeholder="Password"
+              style={{
+                height: 50,
+                width: "90%",
+                padding: 10,
+                marginLeft: 20,
+                borderColor: "#00000",
+                borderBottomWidth: 1,
+              }}
+            ></TextInput>
+          </View>
+          <br></br>
+          <br></br>
+          <View style={{ height: 30, marginBottom: 30 }}>
+            <Text>Forgot Password</Text>
+          </View>
+          <Button
+            title="SIGNUP"
+            onPress={() => navigation.navigate("Details")}
+            color="#008080"
+          />
         </View>
-        <Button
-          title="SIGNUP"
-          onPress={() => navigation.navigate("Details")}
-          color="#008080"
-          
-
-          
-        />
-      </View>
       </View>
     </View>
   );
